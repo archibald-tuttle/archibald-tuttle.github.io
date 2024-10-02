@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pulsanti con Immagini</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px; /* Distanza tra i pulsanti */
+        }
+
+        .btn {
+            width: 100px;
+            height: 100px;
+            background-size: cover;
+            background-position: center;
+            border: none;
+            cursor: pointer;
+        }
+
+        #btn1 {
+            background-image: url('assets/images/but01.png');
+        }
+
+        #btn2 {
+            background-image: url('assets/images/but02.png');
+        }
+
+        #btn3 {
+            background-image: url('assets/images/but03.png');
+        }
+
+        #btn4 {
+            background-image: url('assets/images/but04.png');
+        }
+
+        #btn5 {
+            background-image: url('assets/images/but05.png');
+        }
+
+        /* Aggiungi un effetto hover */
+        .btn:hover {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <div class="button-container">
+        <button id="btn1" class="btn"></button>
+        <button id="btn2" class="btn"></button>
+        <button id="btn3" class="btn"></button>
+        <button id="btn4" class="btn"></button>
+        <button id="btn5" class="btn"></button>
+    </div>
+
+    <script>
+        // Funzione per inviare lo stato di un pulsante al server WebSocket
+        function sendButtonState(buttonId) {
+            const ws = new WebSocket('ws://155.4.94.103:8080');  // Cambia la porta se necessario
+
+            ws.onopen = () => {
+                ws.send(`Il pulsante ${buttonId} è stato premuto!`);
+            };
+
+            ws.onmessage = (event) => {
+                console.log('Messaggio dal server:', event.data);
+            };
+
+            ws.onclose = () => {
+                console.log('Connessione chiusa');
+            };
+        }
+
+        // Aggiungi eventi click per ciascun pulsante
+        document.getElementById('btn1').addEventListener('click', () => sendButtonState('1'));
+        document.getElementById('btn2').addEventListener('click', () => sendButtonState('2'));
+        document.getElementById('btn3').addEventListener('click', () => sendButtonState('3'));
+        document.getElementById('btn4').addEventListener('click', () => sendButtonState('4'));
+        document.getElementById('btn5').addEventListener('click', () => sendButtonState('5'));
+    </script>
+</body>
+</html>
