@@ -15,21 +15,24 @@
             line-height: 1.6;
         }
         header {
-            background-color: #4CAF50;
-            color: white;
+            background-color: #383838;
+            color: rgb(255, 0, 0);
             text-align: center;
-            padding: 20px;
+            padding: 16px;
         }
         main {
             max-width: 800px;
             margin: 20px auto;
             padding: 20px;
-            background-color: white;
+            background-color: rgb(255, 255, 255);
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        h1, h2 {
-            color: #4CAF50;
+        h1 {
+            color: #ffffff;
+        }
+        h2 {
+            color: #ff0000;
         }
         h3 {
             margin-top: 20px;
@@ -40,7 +43,7 @@
         footer {
             text-align: center;
             padding: 20px;
-            background-color: #4CAF50;
+            background-color: #383838;
             color: white;
             position: relative;
             bottom: 0;
@@ -61,24 +64,21 @@
 </header>
 
 <main>
-    <p>To use the conversion tools, FFmpeg must be installed on your system, and the installation path must be included in the Windows environment variables (PATH).</p>
+    <p>To run these conversion tools <a href="https://github.com/archibald-tuttle/FFmpegSphericalVideoConversion.git">misptools</a> FFmpeg must be installed on your system and the installation path must be included in the Windows environment variables (PATH).</p>
 
     <h2>A) Install FFmpeg</h2>
-    <ol>
-        <li>
-            If FFmpeg is not installed, you can download it from the official site: <a href="https://ffmpeg.org/download.html">ffmpeg.org</a>. Follow the instructions for your platform (Windows, macOS, Linux) and make sure to install the full version of FFmpeg.
-        </li>
+        If FFmpeg is not installed, you can download it from the official site: <a href="https://ffmpeg.org/download.html">ffmpeg.org</a>. Follow the instructions for your platform (Windows, macOS, Linux) and make sure to install the full version of FFmpeg.
         <li>
             Download a package containing binaries <code>ffmpeg-git-full.7z</code> from the certified developers' webpage <a href="https://www.gyan.dev/ffmpeg/builds/">gyan.dev</a>. Extract and rename the extracted folder as "ffmpeg".
         </li>
         <li>
             Move the folder to an appropriate location like <code>C:\Program Files\</code>.
         </li>
-    </ol>
+
 
     <h2>B) Add FFmpeg Tools to Environment Variables</h2>
     <p>If you haven't done this already, you need to add the FFmpeg path to the system environment variables. Here's how to do it on Windows:</p>
-    <ol>
+
         <li>
             Locate the directory where you extracted or installed FFmpeg. It should contain <code>ffmpeg.exe</code>, <code>ffprobe.exe</code>, and <code>ffplay.exe</code>.
         </li>
@@ -106,6 +106,7 @@
 
     <p>After confirming that <code>ffmpeg</code> and <code>ffprobe</code> are installed correctly, you are ready to use the tools!</p>
 
+    Let's go back to the repository! <a href="https://github.com/archibald-tuttle/FFmpegSphericalVideoConversion.git">misptools</a>
    </main>
 
 <footer>
