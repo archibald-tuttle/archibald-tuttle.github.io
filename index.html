@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Installing FFmpeg on Windows</title>
+    <title>How to use MISP_e_tools on Windows</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -12,13 +12,13 @@
             padding: 0;
             background-color: #f4f4f4;
             color: #333;
-            line-height: 1.6;
+            line-height: 1.5;
         }
         header {
-            background-color: #383838;
-            color: rgb(255, 0, 0);
+            background-color: #868686;
+            color: rgb(0, 255, 0);
             text-align: center;
-            padding: 16px;
+            padding: 14px;
         }
         main {
             max-width: 800px;
@@ -61,50 +61,24 @@
 
 <header>
     <h1>Installing FFmpeg on Windows</h1>
+    <nav>
+        </ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="tutorial/ffmpeg-install.html">ffmpeg Installation</a></li>
+        <li><a href="tutorial/vvvv-install.html">vvvv Installation</a></li>
+        </ul>
+    </nav>
 </header>
 
 <main>
-    <p>To run these conversion tools <a href="https://github.com/archibald-tuttle/FFmpegSphericalVideoConversion.git">misptools</a> FFmpeg must be installed on your system and the installation path must be included in the Windows environment variables (PATH).</p>
+    <p>To run  <a href="https://github.com/archibald-tuttle/FFmpegSphericalVideoConversion.git"> MISP-E tools </a> FFmpeg and vvvvv.gamma must be installed on your system. And the ffmpeg installation path must be included in the Windows environment variables (PATH).</p>
 
-    <h2>A) Install FFmpeg</h2>
-        If FFmpeg is not installed, you can download it from the official site: <a href="https://ffmpeg.org/download.html">ffmpeg.org</a>. Follow the instructions for your platform (Windows, macOS, Linux) and make sure to install the full version of FFmpeg.
-        <li>
-            Download a package containing binaries <code>ffmpeg-git-full.7z</code> from the certified developers' webpage <a href="https://www.gyan.dev/ffmpeg/builds/">gyan.dev</a>. Extract and rename the extracted folder as "ffmpeg".
-        </li>
-        <li>
-            Move the folder to an appropriate location like <code>C:\Program Files\</code>.
-        </li>
-
-
-    <h2>B) Add FFmpeg Tools to Environment Variables</h2>
-    <p>If you haven't done this already, you need to add the FFmpeg path to the system environment variables. Here's how to do it on Windows:</p>
-
-        <li>
-            Locate the directory where you extracted or installed FFmpeg. It should contain <code>ffmpeg.exe</code>, <code>ffprobe.exe</code>, and <code>ffplay.exe</code>.
-        </li>
-        <li>
-            Go to “Control Panel” → “System” → “Advanced System Settings” → “Environment Variables”.
-        </li>
-        <li>
-            In the “System variables” section, select “Path” and click “Edit”.
-        </li>
-        <li>
-            Add a new entry with the full path to the folder that contains <code>ffmpeg.exe</code>, <code>ffprobe.exe</code>, and <code>ffplay.exe</code>.
-        </li>
-        <li>
-            Click “OK” to close all windows.
-        </li>
-    </ol>
-    
- <!-- Inserting the tutorial image -->
-    <img src="https://archibald-tuttle.github.io/assets/images/tutorial01.jpg" alt="FFmpeg Installation Tutorial">
-
-    <h3>Verify FFmpeg Installation</h3>
-    <p>Open the Command Prompt (CMD) and type:</p>
-    <pre><code>ffmpeg -version</code></pre>
-    <p>If installed correctly, you should see the version of FFmpeg. Otherwise, the command won’t be recognized.</p>
-
-    <p>After confirming that <code>ffmpeg</code> and <code>ffprobe</code> are installed correctly, you are ready to use the tools!</p>
+    <nav>
+    </ul>
+    <li><a href="tutorial/ffmpeg-install.html">ffmpeg Installation</a></li>
+    <li><a href="tutorial/vvvv-install.html">vvvv Installation</a></li>
+    </ul>
+    </nav>
 
     Let's go back to the repository! <a href="https://github.com/archibald-tuttle/FFmpegSphericalVideoConversion.git">misptools</a>
    </main>
