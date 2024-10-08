@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Installing FFmpeg on Windows</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            color: #4CAF50;
+        }
+        h3 {
+            margin-top: 20px;
+        }
+        ol {
+            margin: 10px 0;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #4CAF50;
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Installing FFmpeg on Windows</h1>
+</header>
+
+<main>
+    <p>To use the conversion tools, FFmpeg must be installed on your system, and the installation path must be included in the Windows environment variables (PATH).</p>
+
+    <h2>A) Install FFmpeg</h2>
+    <ol>
+        <li>
+            If FFmpeg is not installed, you can download it from the official site: <a href="https://ffmpeg.org/download.html">ffmpeg.org</a>. Follow the instructions for your platform (Windows, macOS, Linux) and make sure to install the full version of FFmpeg.
+        </li>
+        <li>
+            Download a package containing binaries <code>ffmpeg-git-full.7z</code> from the certified developers' webpage <a href="https://www.gyan.dev/ffmpeg/builds/">gyan.dev</a>. Extract and rename the extracted folder as "ffmpeg".
+        </li>
+        <li>
+            Move the folder to an appropriate location like <code>C:\Program Files\</code>.
+        </li>
+    </ol>
+
+    <h2>B) Add FFmpeg Tools to Environment Variables</h2>
+    <p>If you haven't done this already, you need to add the FFmpeg path to the system environment variables. Here's how to do it on Windows:</p>
+    <ol>
+        <li>
+            Locate the directory where you extracted or installed FFmpeg. It should contain <code>ffmpeg.exe</code>, <code>ffprobe.exe</code>, and <code>ffplay.exe</code>.
+        </li>
+        <li>
+            Go to “Control Panel” → “System” → “Advanced System Settings” → “Environment Variables”.
+        </li>
+        <li>
+            In the “System variables” section, select “Path” and click “Edit”.
+        </li>
+        <li>
+            Add a new entry with the full path to the folder that contains <code>ffmpeg.exe</code>, <code>ffprobe.exe</code>, and <code>ffplay.exe</code>.
+        </li>
+        <li>
+            Click “OK” to close all windows.
+        </li>
+    </ol>
+
+    <h3>Verify FFmpeg Installation</h3>
+    <p>Open the Command Prompt (CMD) and type:</p>
+    <pre><code>ffmpeg -version</code></pre>
+    <p>If installed correctly, you should see the version of FFmpeg. Otherwise, the command won’t be recognized.</p>
+
+    <p>After confirming that <code>ffmpeg</code> and <code>ffprobe</code> are installed correctly, you are ready to use the tools!</p>
+
+    <!-- Inserting the tutorial image -->
+    <img src="assets/images/tutorial01.jpg" alt="FFmpeg Installation Tutorial">
+</main>
+
+<footer>
+    <p>Tutorial created by Archibald Tuttle - © 2024. Follow us for more updates!</p>
+</footer>
+
+</body>
+</html>
